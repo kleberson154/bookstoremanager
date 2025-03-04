@@ -23,9 +23,9 @@ public class Book {
     @Column(nullable = false)
     private Integer chapters;
     @Column(nullable = false)
-    private Integer isbn;
+    private String isbn;
     @Column(name = "publisher_name", nullable = false,  unique = true)
-    private Integer publisherName;
+    private String publisherName;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     @JoinColumn(name = "author_id")
